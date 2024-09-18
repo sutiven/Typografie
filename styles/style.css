@@ -1,0 +1,333 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+
+/* naar een idee van Jen Simmons */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button:not([disabled]) {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Blackout_2AM";
+  src: url(../fonts/Blackout\ 2\ AM.ttf);
+}
+@font-face {
+  font-family: "Blackout_midnight";
+  src: url(../fonts/Blackout\ Midnight.ttf);
+}
+@font-face {
+  font-family: "Blackout_sunrise";
+  src: url(../fonts/Blackout\ Sunrise.ttf);
+}
+@font-face {
+  font-family: "CaslonOS";
+  src: url(../fonts/CaslonOS-Regular.otf);
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+/********************/
+/* ALGEMENE STYLING */
+/********************/
+
+h1 {
+  color: white;
+  text-shadow: 0 0 5px black, 0 0 10px white, 0 0 20px white, 0 0 80px white;
+  font-family: "Blackout_midnight";
+  font-size: 6em;
+  margin: 0;
+}
+
+h1 span:nth-of-type(1) {
+  font-family: "Blackout_sunrise";
+  color: white;
+  text-shadow: 0 0 5px yellow, 0 0 10px yellow, 0 0 20px yellow, 0 0 80px yellow,
+    0 0 120px yellow;
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  60%,
+  70%,
+  79% {
+    opacity: 1;
+  }
+  65%,
+  67%,
+  76%,
+  78% {
+    opacity: 0.2;
+  }
+  66%,
+  69%,
+  77% {
+    opacity: 0.8;
+  }
+}
+h1 span:nth-of-type(2) {
+  font-family: "Blackout_2AM";
+  color: yellow;
+  text-shadow: 0 0 5px black, 0 0 10px yellow, 0 0 20px yellow, 0 0 80px yellow;
+}
+
+h2 {
+  font-family: "Blackout_2AM";
+  font-size: 2.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Blackout_2AM";
+  font-size: 1.5em;
+}
+
+.landingpagina {
+  background-image: url(../images/background/black-textured-brick-wall-background.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.landingpagina h1 {
+  padding: 0.2em;
+}
+.landingpagina .banner {
+  position: absolute;
+  padding-top: 70vh;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.landingpagina .banner .scroll {
+  width: 100%;
+  display: flex;
+}
+.landingpagina .banner .scroll div {
+  color: #000;
+  font-family: "Blackout_midnight";
+  font-size: 4em;
+  background: yellow;
+  white-space: nowrap;
+  font-weight: 900;
+  animation: animate 40s linear infinite;
+  animation-delay: -40s;
+}
+.landingpagina .banner .scroll div:nth-child(2) {
+  animation: animate2 40s linear infinite;
+  animation-delay: -20s;
+}
+.landingpagina .banner .scroll div span {
+  -webkit-text-stroke: 1px #000;
+  color: transparent;
+}
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+.landingpagina .banner .scroll.text1 {
+  transform: rotate(5deg) translateY(5%) translateX(-5%);
+}
+.landingpagina .banner .scroll.text2 {
+  transform: rotate(-5deg) translateY(5%) translateX(-5%);
+}
+
+.introductie {
+  background-image: url(../images/background/wall.jpg);
+  background-size: cover;
+}
+
+p {
+  font-family: "Blackout_midnight";
+  font-size: 1.3em;
+}
+
+.introductie section {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 1fr 35em;
+}
+.introductie section div {
+  padding: 2em;
+  max-width: 40em;
+}
+
+.about {
+  background-image: url(../images/background/krant.jpg);
+}
+
+.about section:nth-of-type(1) {
+  background-color: rgba(255, 255, 255, 0.753);
+  display: grid;
+  grid-template-columns: 1fr 20em;
+  margin: 2em;
+}
+.about section:nth-of-type(1) div {
+  padding: 2em;
+  max-width: 40em;
+}
+
+.about section:nth-of-type(2) {
+  background-color: rgba(255, 255, 255, 0.753);
+  display: grid;
+  grid-template-rows: 12em 1fr;
+  margin: 2em;
+}
+.about section:nth-of-type(2) div:nth-of-type(1) {
+  padding-left: 2em;
+}
+.about section:nth-of-type(2) div:nth-of-type(2) {
+  padding-bottom: 2em;
+}
+
+.about section:nth-of-type(2) div:nth-of-type(2) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about section:nth-of-type(3) {
+  background-image: url(../images/background/krantpapier.jpg);
+  background-size: cover;
+  height: 105vh;
+  display: grid;
+  grid-template-columns: 1fr 20% 33%;
+  padding: 2em;
+}
+.about section:nth-of-type(3) figcaption {
+  font-family: "Blackout_2AM";
+  margin-bottom: 1em;
+}
+
+.about section:nth-of-type(3) div:nth-of-type(1) {
+  max-width: 40em;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.819);
+}
+.about section:nth-of-type(3) div:nth-of-type(1) h3:nth-of-type(2) {
+  font-family: sans-serif;
+}
+.about section:nth-of-type(3) div:nth-of-type(1) p:nth-of-type(2) {
+  font-family: sans-serif;
+}
+.about section:nth-of-type(3) div:nth-of-type(2) {
+  padding: 2em;
+}
+.about section:nth-of-type(3) div:nth-of-type(3) {
+  padding: 2em;
+}
+
+.about section:nth-of-type(4) {
+  padding: 2em;
+}
+.about section:nth-of-type(4) ul {
+  display: grid;
+  grid-template-columns: 20em 20em 20em;
+  gap: 2em;
+}
+
+li {
+  list-style: none;
+}
+.about section:nth-of-type(4) ul li:nth-of-type(1) p {
+  font-family: "Blackout_2AM";
+}
+.about section:nth-of-type(4) ul li:nth-of-type(2) p {
+  font-family: "Blackout_midnight";
+}
+.about section:nth-of-type(4) ul li:nth-of-type(3) p {
+  font-family: "Blackout_sunrise";
+}
+
+.about section:nth-of-type(5) {
+  padding: 2em;
+}
+
+.about section:nth-of-type(5) form input {
+  margin-left: 1em;
+  width: 60%;
+  font-family: Blackout_2AM;
+  text-align: center;
+  font-size: 5em;
+  color: black;
+  background-color: white;
+  border: white 2px solid;
+  border-left: transparent;
+  border-right: transparent;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+.lttr {
+  height: 100vh;
+  background-color: #ffda1a;
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 1fr 40em;
+}
+
+.lttr div:nth-of-type(1) {
+  max-width: 40em;
+}
+
+.lttr div:nth-of-type(1) h3 {
+  color: #0051ba;
+}
+.lttr div:nth-of-type(1) p {
+  color: #0051ba;
+}
+
+.bronnen {
+  display: grid;
+  grid-template-columns: 1fr 20em;
+  background-color: #000;
+  padding: 2em;
+}
+.bronnen h3 {
+  color: white;
+}
+.bronnen a {
+  font-family: "Blackout_midnight";
+  color: white;
+}
+.bronnen a:hover {
+  color: yellow;
+}
+.bronnen a {
+  transform: rotate(90deg);
+  background: none;
+  border: none;
+  width: 10em;
+}
+/* ... */
