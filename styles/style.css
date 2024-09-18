@@ -102,7 +102,7 @@ h3 {
 }
 
 .landingpagina {
-  background-image: "../images/background/black-textured-brick-wall-background.jpg)";
+  background-image: "../images/background/black-textured-brick-wall-background.jpg";
   background-size: cover;
   height: 100vh;
   display: grid;
@@ -164,7 +164,7 @@ h3 {
 }
 
 .introductie {
-  background-image: "../images/background/wall.jpg)";
+  background-image: "../images/background/wall.jpg";
   background-size: cover;
 }
 
@@ -184,7 +184,7 @@ p {
 }
 
 .about {
-  background-image: "../images/background/krant.jpg)";
+  background-image: "../images/background/krant.jpg";
 }
 
 .about section:nth-of-type(1) {
