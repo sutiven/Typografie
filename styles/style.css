@@ -218,7 +218,7 @@ p {
 }
 
 .about section:nth-of-type(3) {
-  background-image: url("../images/background/krantpapier.jpg)";
+  background: url("../images/background/krantpapier.jpg");
   background-size: cover;
   height: 105vh;
   display: grid;
