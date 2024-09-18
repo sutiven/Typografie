@@ -102,7 +102,7 @@ h3 {
 }
 
 .landingpagina {
-  background-image: url(../images/background/black-textured-brick-wall-background.jpg);
+  background-image: url(./images/background/black-textured-brick-wall-background.jpg);
   background-size: cover;
   height: 100vh;
   display: grid;
@@ -164,7 +164,7 @@ h3 {
 }
 
 .introductie {
-  background-image: url(../images/background/wall.jpg);
+  background-image: url(/images/background/wall.jpg);
   background-size: cover;
 }
 
